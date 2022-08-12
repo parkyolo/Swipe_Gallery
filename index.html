@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Swipe Gallery</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/6a85bbf4e1.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <h1>UI/UX <span>PORTFOLIO</span></h1>
+        <ul class="auto">
+            <li class="btnStart">
+                <i class="fas fa-play"></i>
+            </li>
+            <li class="btnStop">
+                <i class="fas fa-pause"></i>
+            </li>
+        </ul>
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic1.jpg" alt="">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, quidem.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic2.jpg" alt="">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, quidem.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic3.jpg" alt="">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, quidem.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic4.jpg" alt="">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, quidem.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="inner">
+                    <div class="con">
+                        <img src="img/pic5.jpg" alt="">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, quidem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".wrap", {
+          pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          slidesPerView: "auto", // 슬라이드의 크기를 원하는 대로 지정해주기 위한 옵션
+          spaceBetween: 50, // 슬라이드 간격
+          loop: true, // 슬라이드가 끝에서 반복되도록
+          centeredSlides: true, // 가운데 슬라이드를 고정
+          speed: 1000, // 슬라이드가 움직이는 속도
+          effect: "coverflow", // effect 추가
+          coverflowEffect: {
+            rotate: 50, // 회전 각도
+            stretch: -100, // 슬라이드 간격(작을수록 멀어짐)
+            depth: 400, // 슬라이드가 멀어질 때의 깊이
+            modifier: 1, // 효과의 배수
+            slideShadows: false, // 옆 면 그림자
+          },
+        });
+    </script>
+</body>    
+</html>
